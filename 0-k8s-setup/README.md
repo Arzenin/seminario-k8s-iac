@@ -76,7 +76,7 @@ Se da por sentado que la herramienta de Docker Desktop ha sido instalada previam
     kubectl rollout restart deployment argocd-dex-server -n argocd
     ```
 
-- Generamos la masterapp de ArgoCD la cual será la encargada de crear las aplicaciones sin la necesidad de usar la terminal de Kubernetes
+- Generamos la masterapp de ArgoCD la cual será la encargada de crear las aplicaciones sin la necesidad de usar la cli de Kubernetes (kubectl)
   
   - ```bash
     kubectl apply -n argocd -f argocd/masterapp-base.yml
