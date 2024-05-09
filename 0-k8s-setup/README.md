@@ -1,6 +1,6 @@
 ## Instalación de Traefik y ArgoCD
 
-Se da por sentado que las herramienta de Docker Desktop ha sido instalada previamente.
+Se da por sentado que la herramienta de Docker Desktop ha sido instalada previamente.
 
 ## Requisitos previos:
 
