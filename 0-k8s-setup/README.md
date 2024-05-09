@@ -62,18 +62,18 @@ Se da por sentado que la herramienta de Docker Desktop ha sido instalada previam
   - ```bash
     kubectl apply -n argocd -f argocd/configmap.yml
     ```
-
-- Obtenemos las credenciales
-  
-  - ```bash
-    kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
-    ```
-
+    
 - Reiniciamos el servicio
   
   - ```bash
     kubectl rollout restart deployment argocd-server -n argocd
     kubectl rollout restart deployment argocd-dex-server -n argocd
+    ```
+    
+- Obtenemos las credenciales
+  
+  - ```bash
+    kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
     ```
 
 - Generamos la masterapp de ArgoCD la cual será la encargada de crear las aplicaciones sin la necesidad de usar la cli de Kubernetes (kubectl)
